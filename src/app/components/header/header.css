@@ -1,0 +1,107 @@
+header{
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2px 2px;
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+        a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+        }
+    
+        a:hover {
+        text-decoration: underline;
+        }
+    
+       .nav-items {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        &.open{
+            flex-direction: column;
+            position: absolute;
+            top: 48px;
+            right: 15;
+            width: 30%;
+            background-color: #333;
+            opacity: 0.9;
+            padding: 20px;
+            z-index: 1000;
+            
+
+        }
+    
+       .nav-items li {
+        margin: 0 1rem;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: Figtree, sans-serif;
+        text-decoration: none;
+
+        }
+       }
+
+       .btn-default {
+        background-color: #f1fe5a;
+        color: #000000;
+        border: none;
+        padding: 0.5rem 1.7rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Figtree, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        margin-right: 20px;
+        }
+         .btn-default:hover {
+        background-color: #e0e52e;
+        color: #000000;
+        border: none;
+        padding: 0.5rem 1.7rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Figtree, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+         font-weight: 700;
+        margin-right: 20px;
+         }
+    
+       .btn-mobile {
+        display: none;
+        } 
+        
+              @media screen and (max-width: 768px) { /* Ajustes para telas pequenas */
+                    .btn-mobile {
+                        display: block;
+                        background-color: transparent;
+                        font-size: 20px;
+                        color: #f1fe5a;
+                        border: none;
+                        margin-right: 15px;
+                        cursor: pointer;
+                    }
+
+                    .nav-items { /* Esconder itens de navegação em telas pequenas */
+                        display: none;
+
+                        &.open {
+                            display: flex;
+                        }
+                    }
+
+                    .btn-default { /* Esconder o botão padrão em telas pequenas */
+                        display: none;
+                    }
+               } 
+        
+    }
+}
