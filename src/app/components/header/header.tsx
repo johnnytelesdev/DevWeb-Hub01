@@ -49,4 +49,4 @@ export default function Header() {
     </header>
   );
 }
-
+//configurado para ser um componente cliente no Next.js
